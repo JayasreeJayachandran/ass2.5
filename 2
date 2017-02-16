@@ -1,0 +1,15 @@
+ Rack:
+      >rack is a group of nodes that are connected by a common network switch such that their network bandwith between different
+       racks varies where it is same in the same rack.
+ Rack arrangement in a hadoop cluster:
+      >in order to withstand the node failure ,the replications are designed to keep in different racks .so that even a single rack
+        fails therre is a copy in another rack such that it increases the fault tolerance.
+      >normally the network switch connects the data nodes and name node.during the failure of network switch there is a possibility
+       of losing data.so racks are introduced that there is atleast one replica in another rack such that even in the failure of one
+       rack we can get it from another rack. 
+      >hadoop clusters are arranged in racks such that the network traffic b/w rack is lesser.
+      >In addition NameNode tries to place replicas of block on multiple racks for improved fault tolerance. 
+      >the hadoop cluster decides the rack in which the datas are through configuration attributes.
+      >after configuring each node gets it rack id.
+      >on default all the nodes are conidered to be in a single rack. 
+   
